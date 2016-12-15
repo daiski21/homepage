@@ -1,0 +1,22 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+  	"start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daiski21/homepage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daiski21/homepage/issues"
+  },
+  "homepage": "https://github.com/daiski21/homepage#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
