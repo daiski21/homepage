@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE HTML>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+
+
+
+
+
+
+
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+
+<script language="javascript">
+
+
+function copy(inElement) {
+  if (inElement.createTextRange) {
+    var range = inElement.createTextRange();
+    if (range)
+      range.execCommand('Copy');
+  } else {
+    var flashcopier = 'flashcopier';
+    if(!document.getElementById(flashcopier)) {
+      var divholder = document.createElement('div');
+      divholder.id = flashcopier;
+      document.body.appendChild(divholder);
+    }
+    document.getElementById(flashcopier).innerHTML = '';
+    var divinfo = '<embed src="_clipboard.swf" FlashVars="clipboard='+encodeURIComponent
+
+(inElement.value)+'" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+    document.getElementById(flashcopier).innerHTML = divinfo;
+  }
+}
+
+</script>
+
+<style>
+.filestosend {
+overflow: hidden; height: 0; width:0;
+color: black; background-color: gray;
+}
+
+body {
+background-color: gray;
+}
+
+</style>
+
+		<title>ASD Guide Links</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro" rel="stylesheet" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>		
+		<script src="js/skel.min.js">
+		{
+			prefix: 'css/style',
+			preloadStyleSheets: true,
+			resetCSS: true,
+			boxModel: 'border',
+			grid: { gutters: 30 },
+			breakpoints: {
+				wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+				narrow: { range: '481-1199', containers: 960 },
+				mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+			}
+		}
+		</script>
+		<script>
+			$(function() {
+
+				// Note: make sure you call dropotron on the top level <ul>
+				$('#main-nav > ul').dropotron({ 
+					offsetY: -10 // Nudge up submenus by 10px to account for padding
+				});
+
+			});
+		</script>
+		<script>
+			// DOM ready
+			$(function() {
+    
+			// Create the dropdown base
+			$("<select />").appendTo("nav");
+   
+			// Create default option "Go to..."
+			$("<option />", {
+				"selected": "selected",
+				"value"   : "",
+				"text"    : "Menu"
+			}).appendTo("nav select");
+   
+			// Populate dropdown with menu items
+			$("nav a").each(function() {
+			var el = $(this);
+			$("<option />", {
+				"value"   : el.attr("href"),
+				"text"    : el.text()
+			}).appendTo("nav select");
+			});
+   
+			// To make dropdown actually work
+			// To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+			$("nav select").change(function() {
+				window.location = $(this).find("option:selected").val();
+			});
+  
+			});
+		</script>	
+	
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Timbang, Sander</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">System Account</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+	<body>
+
+		
+			
+				<!-- Features -->			
+				<div class="row">									
+					<section class="8u">				
+						
+						
+					
+					<section class="4u">
+						<div id="sidebar">
+
+							<section class="12u">
+								<h3>Useful Links:</h3>
+								<ul>
+									<li><a href="https://asd.bp1.humanify.com/agentdesktop/">Humanify</a></li>
+									<li><a href="https://asknow.service-now.com/navpage.do">Asknow</a></li>
+									<li><a href="http://techweb/idverify/sender.aspx">Employee Verifier</a></li>
+									<li><a href="http://usden-paradm01/ARWebHelpDesk/default.aspx">Active Directory</a></li>
+									<li><a href="https://vncmonitor.teletech.com/">VNC</a></li>
+    								<li><a href="https://uldcp-ahwiki01.teletech.com/wiki/ ">Wiki</a></li>
+    								<li><a href="https://teletech.taleo.net/smartorg/iam/accessmanagement/login.jsf?redirectionURI=https%3A%2F%2Fteletech.taleo.net%2Fsmartorg%2FTaleoHomePage.jss&TARGET=https%3A%2F%2Fteletech.taleo.net%2Fsmartorg%2FTaleoHomePage.jss">TALEO</a></li>
+                                    <li><a href="https://uldcp-ahwiki01.teletech.com/wiki/tiki-list_file_gallery.php?galleryId=2">Email Templates</a></li>
+    								<li><a href="https://ttec.zoom.us">Zoom</a></li>
+    								<li><a href="https://oracle.teletech.com:8443/OA_HTML/AppsLocalLogin.jsp">Oracle</a></li>
+    								<li><a href="https://kronoshtml.teletech.com/wfc/applications/wtk/html/ess/logon.jsp">Kronos</a></li>
+    								<li><a href="http://onesite.teletech.com/">Onesite</a></li>
+    								<li><a href="https://uldcp-ahwiki01.teletech.com/wiki/tiki-index.php?page=ASD%20Contacts">Contacts</a></li>
+                                    <li><a href="https://workbooth.info/">Workbooth Info</a></li>
+                                    <li><a href="https://www.ttecu.com/">TTEC University</a></li>
+                                    <li><a href="https://globalsites.teletech.com/IT/Ops/ASD/_layouts/15/start.aspx#/Lists/Orientation%20Master%20Tracker%202018/Status%20View.aspx">Orientation Tracker</a></li>
+									<li><a href="http://monitoring.workbooth.com:85/">Monitoring Dashboard</a></li>
+									<li><a href="https://teletechinc.sharepoint.com/">Sharepoint</a></li>
+									<li><a href="https://workbooth.info/category/production/tt2go/">TT2Go</a></li>
+								</ul>
+							</section>
+						
+						</div>
+					</section>			
+
+				</div>
+			</div>
+        </div>		
+		
+			<div class="container">			
+			<!-- Footer -->
+				<footer>
+					
+				
+
+
+					<p>Copyright &copy; At Home Service Desk | Teletech@Home Technology</p>
+					
+
+				</footer>		
+			</div>	
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(function(){
+$(".fileset :checkbox").on("change", function() {
+    var div = $(this).parent();
+    var id = div.attr("id").split("-")[1];
+    var values = [];
+    div.find(":checked").each(function() {
+        values.push(this.value);
+    });
+    $("#file-" + id).val(values.join("\n"));
+});	
+
+});//]]>  
+
+</script>
+
+
+<script type="text/javascript">
+(function() {
+function zcInit(){var a=new ZeroClipboard($(".btn-copy"));a.on("ready",function(){a.on("copy",function(a){var e=$(a.target).prev(),t=e.is("textarea")?e.val().replace(/\n/g,"\r\n"):e.val();t&&a.clipboardData.setData("text/plain",t)}),a.on("aftercopy",function(a){var e=$(a.target);e.prev().val()&&e.next().stop().css("opacity",1).text("Copied!").fadeIn(30).fadeOut(1e3)})}),a.on("error",function(){ZeroClipboard.destroy()})}function addHandler_WinClipData(){$(".btn-copy").click(function(){var a=$(this).prev(),e=a.is("textarea")?a.val().replace(/\n/g,"\r\n"):a.val();e&&window.clipboardData.setData("Text",e)&&$(this).next().stop().css("opacity",1).text("Copied!").fadeIn(30).fadeOut(1e3)})}function addHandler_AlertMsg(){$(".btn-copy").click(function(){$(this).prev().val()&&(alert("No Flash installed. Please copy manually"),$(this).prev().focus().select())})}function detectFlash(){var a=!1;try{var e=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");e&&(a=!0)}catch(t){navigator.mimeTypes&&void 0!==navigator.mimeTypes["application/x-shockwave-flash"]&&navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin&&(a=!0)}return a}var hasWinClipData=!(!window.clipboardData||!clipboardData.setData),hasFlash=detectFlash();hasWinClipData?addHandler_WinClipData():hasFlash?$.ajax({type:"GET",url:"//cdn.jsdelivr.net/zeroclipboard/2.1.6/ZeroClipboard.min.js",dataType:"script",cache:!0,success:zcInit,error:addHandler_AlertMsg}):addHandler_AlertMsg();
+}());
+</script>
+
+
+<script type="text/javascript">
+       setInterval(refreshIframe2, 1800000);
+       function refreshIframe2() {
+           var frame = document.getElementById("iframe1");
+           frame.src = frame.src;
+       }
+</script>
+	
+			
+	</body>
+</html>

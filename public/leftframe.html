@@ -1,0 +1,1493 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript">
+function copy(inElement) {
+  if (inElement.createTextRange) {
+    var range = inElement.createTextRange();
+    if (range)
+      range.execCommand('Copy');
+  } else {
+    var flashcopier = 'flashcopier';
+    if(!document.getElementById(flashcopier)) {
+      var divholder = document.createElement('div');
+      divholder.id = flashcopier;
+      document.body.appendChild(divholder);
+    }
+    document.getElementById(flashcopier).innerHTML = '';
+    var divinfo = '<embed src="_clipboard.swf" FlashVars="clipboard='+encodeURIComponent
+
+(inElement.value)+'" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+    document.getElementById(flashcopier).innerHTML = divinfo;
+  }
+}
+
+function nCopy() {
+  var copyText = document.getElementById("headerinfo");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Initial post has been copied: " + copyText.value);
+}
+function nCopyIssueStarted() {
+  var copyText = document.getElementById("time1");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Issue started at " + copyText.value);
+}
+function nCopyIssueEnded() {
+  var copyText = document.getElementById("time2");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Issue ended at " + copyText.value);
+}
+function nCopyNotes() {
+  var copyText = document.getElementById("notes");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Your notes has been copied! " );
+}
+
+function nCheck1() {
+  var checkBox = document.getElementById("ui1");
+  var text4train = document.getElementById('ui1').value;
+  if (checkBox.checked == true){
+//    document.getElementById("notes").innerHTML = document.getElementById("notes").value + "Checked: " + text4train + " ";
+    document.getElementById("notes").value = document.getElementById("notes").value + "#"  + text4train + " ";
+  } 
+  
+  
+
+}
+function nCheck2() {
+  var checkBox = document.getElementById("ui2");
+  var text4train = document.getElementById('ui2').value;
+  if (checkBox.checked == true){
+    document.getElementById("notes").value = document.getElementById("notes").value + "#"  + text4train + " ";
+  } 
+  
+ 
+
+}
+
+
+    window.onload = function() {
+        setTimeout(function () {
+            location.reload()
+        }, 2000);
+     };
+
+
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+function disable() {
+   
+        $('#fileset-1 :input').attr('disabled', true);
+		$('#fileset-2 :input').attr('disabled', true);
+		$('#fileset-3 :input').attr('disabled', true);
+		$('#fileset-4 :input').attr('disabled', true);
+		$('#fileset-5 :input').attr('disabled', true);
+}
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[ 
+function initial() {
+var area = document.getElementById("file-50");
+var message = document.getElementById("message");
+var triggerLength = 290;
+var checkLength = function() {
+    if(area.value.length > triggerLength) {
+       
+	   $('#fileset-1 :input').removeAttr('disabled');
+	   $('#fileset-2 :input').removeAttr('disabled');
+	   $('#fileset-3 :input').removeAttr('disabled');
+	   $('#fileset-4 :input').removeAttr('disabled');
+	   $('#fileset-5 :input').removeAttr('disabled');
+    }
+	
+	else
+	disable()
+}
+setInterval(checkLength, 300);
+}//]]>  
+
+</script>
+
+
+<script language="javascript">
+
+
+function copy(inElement) {
+  if (inElement.createTextRange) {
+    var range = inElement.createTextRange();
+    if (range)
+      range.execCommand('Copy');
+  } else {
+    var flashcopier = 'flashcopier';
+    if(!document.getElementById(flashcopier)) {
+      var divholder = document.createElement('div');
+      divholder.id = flashcopier;
+      document.body.appendChild(divholder);
+    }
+    document.getElementById(flashcopier).innerHTML = '';
+    var divinfo = '<embed src="_clipboard.swf" FlashVars="clipboard='+encodeURIComponent
+
+(inElement.value)+'" width="0" height="0" type="application/x-shockwave-flash"></embed>';
+    document.getElementById(flashcopier).innerHTML = divinfo;
+  }
+}
+
+</script>
+
+
+
+<style>
+
+.notes2copy{
+overflow: hidden; height: 0; width:0;
+resize: none;
+color: black; background-color: transparent;
+border: #027991;
+}
+
+.selectbox1
+	{
+padding-left: 130px;
+height: 18px;
+width: 350px;
+	
+	}
+
+
+
+.selectbox2
+	{
+padding-left: 31%;
+height: 18px;
+width: 350px;
+	
+	}
+
+.selectbox3
+	{
+padding-left: 7px;
+height: 18px;
+width: 350px;
+	
+	}
+
+
+
+
+.selectbox5
+	{
+padding-left: 29%;
+height: 18px;
+width: 350px;
+	
+	}
+
+.hidden {
+    display: none;
+}
+
+.notess {
+resize: none;
+}
+
+
+body{
+    
+
+        background: #006666;
+        min-width: 400px;
+
+}
+
+button {
+ background-color: #005c99;
+}
+
+
+
+.button2
+{
+background-color:blue; width:100px;height:21px;
+}
+
+
+.timeboxclass {
+text-align:center;
+height: 15px;
+width: 200px;
+}
+
+
+.textboxclass {
+text-align:center;
+height: 15px;
+width: 350px;
+}
+
+#header h1 a .header_colour { 
+  color: #FFF;
+  text-shadow: 1px 1px #0074B6;  
+}
+</style>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Timbang, Sander</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">System Account</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<title></title></head>
+<body onload="initial()";>
+<center>
+<div style="margin: 15px 0px 0px; display: inline-block; text-align: center; width: 72px;"><div style="display: inline-block; padding: 2px 4px; margin: 0px 0px 5px; border: 1px solid rgb(204, 204, 204); text-align: center; background-color: rgb(255, 255, 255);"><a href="http://localtimes.info/North_America/United_States/New_York/New_York_Jfk_Intl_Arpt/" style="text-decoration: none; font-size: 13px; color: rgb(0, 0, 0);"><img src="http://localtimes.info/images/countries/us.png"="" border=0="" style="border:0;margin:0;padding:0"="">EST</a></div><script type="text/javascript" src="http://localtimes.info/clock.php?continent=North America&country=United States&province=New York&city=New York Jfk Intl Arpt&cp1_Hex=000000&cp2_Hex=FFFFFF&cp3_Hex=000000&fwdt=72&ham=0&hbg=0&hfg=0&sid=0&mon=0&wek=0&wkf=0&sep=0&widget_number=100"></script></div>
+</center>
+
+<div class="rightcontent">
+<center><b><font color="#FFF">Paste the Interapp Chat Info in the box below:</font></b> </center>
+<center><b><font color="#FFF"> </b><input type="textbox" id="textbox1" name="textbox1" value="" class="textboxclass"> </input> <b></center></b></font>
+<center><button onclick="chatheaderextract()" ><font color="#FFF">Extract</font></button>
+<br><br>
+
+
+<input type="text" class = "textboxclass" name="onum" id="onum" value="Oracle#" onkeyup="callheader()" onclick="this.select()" onfocusout="settext1()"/> <br>
+<input type="text" class = "textboxclass" name="cname" id="cname" value="Caller Name" onkeyup="callheader()" onclick="this.select()" onfocusout="settext2()"/> <br>
+<select  class="selectbox" name="yekto" id="yekto" value="Client LOB" onChange="callheader()"  onfocusout="settext0()">
+  <option value="N/A">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClient LOB</option>
+  <option value="ADP">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspADP Enterprise Services</option>
+  <option value="ALLSTATE">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAllstate CCC Call Ctr</option>
+  <option value="ARC">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAmerican Red Cross - Front Office</option>
+  <option value="APPLICANT">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAt Home Candidate</option>
+  <option value="AVIDX">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAvidXChange Data Extraction and Indexing</option>
+  <option value="PRIMARY SUPPORT">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBest Buy - Primary Support </option>
+  <option value="BOTW">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBank of The West</option>
+  <option value="CVS">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCVS</option>
+  <option value="Experian">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExperian</option>
+  <option value="GuideWell">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGuideWell Healthcare</option>  
+  <option value="HCSC">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHealth Care Services Corporation (HCSC)</option>
+  <option value="IBC">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIBC - Individual Sales</option>
+  <option value="Kaiser">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKaiser KPMA/KPIF</option>
+  <option value="LOGITECH">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLOGITECH - @Home Jaybird</option>
+  <option value="MORGAN STANLEY">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMorgan Stanley</option>
+  <option value="NISSAN">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNissan NA Service Marketing</option>
+  <option value="R and F">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRodan & Fields @Home FT</option>
+  <option value="R and F">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRodan & Fields @Home PT</option>
+  <option value="Rogers">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRogers Wireless</option>
+  <option value="Fido">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFido Postpaid</option>
+  <option value="WEIGHT WATCHERS">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeight Watchers</option>
+  
+  </select>
+
+<br>
+<input type="text" class = "textboxclass" name="aissue" id="aissue" value="Agent's Issue" onkeyup="callheader()" onclick="this.select()" onfocusout="settext3()"/> 
+
+<br>
+
+<font color="#FFF">
+
+<span title="Check this box if the caller is STILL a TRAINEE and not yet in production">Training:<input type="checkbox" class='chkbx' value="Training" id="ui1" onclick="nCheck1()"> </span>
+
+
+<span title="Check this box if the caller is just requesting for a ticket number">Ticket Request:<input type="checkbox" class='chkbx' value="Ticket Request" id="ui2" onclick="nCheck2()"> </span>
+
+</font>
+<font color="#FFFF33"><b>
+
+</b></font>
+</center>
+<center> <b><font color="#FFF">Ticket Header: </b> </font> 
+<br>
+<input type="textbox" class = "textboxclass" id="headerinfo" name="headerinfo" value="" onclick="this.select()" onkeyup="callheader();"> </input>
+        <textarea id="headerinfopush" name="headerinfopush" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <textarea class="hidden"></textarea><br>
+        <textarea id="getheader" name="getheader" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" onclick="nCopy()"><font color="#FFF">Copy</font></button>
+        <span class="span-message"></span>
+		
+
+</center>
+<br>
+
+
+<center><font color="#FFF">Time Issue Started (MDT) <br><input type="text" name="time1" id="time1" class="timeboxclass" onkeyup="aggregateInput()"/> </font><button onclick="puttime1()" ><font color="#FFF">*</font></button><br>
+        <textarea id="starttime" name="starttime" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+	<button type="button" id="btn-copy2" class="btn-copy" onclick="nCopyIssueStarted()"  ><font color="#FFF">Copy</font></button>
+	<span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+
+<font color="#FFF">Time Issue Ended (MDT) <br><input type="text" name="time2" id="time2"  class="timeboxclass" onkeyup="aggregateInput()"/> </font> <button onclick="puttime2()" ><font color="#FFF">*</font></button><br>
+        <textarea id="endtime" name="endtime" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+	<button type="button" id="btn-copy2" class="btn-copy" onclick="nCopyIssueEnded()"  ><font color="#FFF">Copy</font></button>
+	<span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+
+</center>
+
+
+
+</select>
+
+
+</center>
+
+
+
+
+<center><b> <font color="#FFF">Notes: </font><br></b> 
+
+        <textarea id="notes" name="notes"  rows="10%" cols="49px" class="notess" ></textarea><br>
+        <!-- <textarea class="hidden"></textarea>
+		<textarea id="hashtag" name="hashtag" rows="20" cols="1%" class="notes2copy" style="border: #027991;" onkeyup="aggregateInput()";></textarea>
+        <textarea id="notestocopy" name="notestocopy" rows="20" cols="1%" class="notes2copy" style="border: #027991;" onkeyup="aggregateInput()";></textarea> -->
+	<button type="button" id="btn-copy2" class="btn-copy" onclick="nCopyNotes()"><font color="#FFF">Notes</font></button>
+	<span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+        <textarea class="hidden"></textarea><br>
+
+<select class="selectbox3" name="project" id="project" onChange="javascript:projtocopy();">
+  <option value="ADP Total Source">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspADP Enterprise Services</option>
+  <option value="Allstate CCC Call Ctr">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAllstate CCC Call Ctr</option>
+  <option value="American Red Cross - Front Office">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAmerican Red Cross - Front Office</option>
+  <option value="AT Home Candidates">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAt Home Candidate</option>
+  <option value="Avidxchange Data Extraction And Indexing">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAvidXChange Data Extraction and Indexing</option>
+  <option value="BEST BUY - PRIMARY SUPPORT ENGLISH">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBest Buy - Primary Support </option>
+  <option value="Bank of the West Service">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBank of The West</option>
+  <option value="Cedars Sinai 1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCedars Sinai</option>
+  <option value="CVS">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCVS</option>
+  <option value="Experian">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExperian</option>
+  <option value="Guidewell Healthcare At Home">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGuideWell Healthcare</option>  
+  <option value="HCSC Group Support">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHealth Care Services Corporation (HCSC)</option>
+  <option value="IBC - Individual Sales">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIBC - Individual Sales</option>
+  <option value="Kaiser - KPIF">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKaiser KPMA/KPIF</option>
+  <option value="Logitech - @Home Jaybird">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLOGITECH - @Home Jaybird</option>
+  <option value="Morgan Stanley Service">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMorgan Stanley</option>
+  <option value="Nissan (Revana) Service">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNissan NA Service Marketing</option>
+  <option value="Rodan and Fields @Home FT">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRodan & Fields @Home FT</option>
+  <option value="Rodan and Fields @Home PT">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRodan & Fields @Home PT</option>
+  <option value="Atelka - Rogers Wireless Service">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRogers Wireless</option>
+  <option value="Atelka - Fido Postpaid">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFido Postpaid</option>
+  <option value="Weight Watchers Service">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeight Watchers</option>
+ 
+  </select>
+
+
+        <textarea class="hidden"></textarea><br>
+        <textarea id="projtocopy" name="projtocopy" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Client LOB</font></button>
+        <span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+        <textarea class="hidden"></textarea><br>
+<select class="selectbox5" name="lsite" id="lsite" size="1" onChange="javascript:lobsitetocopy();">
+   <option value="At Home - US">Agents At Home - US</option>
+   <option value="At Home - Healthcare">At Home - Healthcare</option>
+   <option value="@Home">@Home</option>
+</select>
+        <textarea class="hidden"></textarea><br>
+        <textarea id="lobsite" name="lobsite" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Site</font></button>
+        <span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+        <textarea class="hidden"></textarea><br>
+		
+
+<SPAN id=tooltip
+style="BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 3px; BORDER-TOP:
+#000000 1px solid; DISPLAY: none; PADDING-LEFT: 3px; FONT-SIZE: 12px;
+PADDING-BOTTOM: 3px; BORDER-LEFT: #000000 1px solid; PADDING-TOP: 3px;
+BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana; POSITION: absolute;
+BACKGROUND-COLOR: #a6bed9">
+</SPAN>
+
+<select class="selectbox5" name="bus" id="bus" size="1" onChange="javascript:businesstocopy();"
+onmouseleave=showHideTooltip() onmouseenter=showHideTooltip()> 
+       <option value="Access Management" selected>Issue Related to NT </OPTION>
+       <option value="Agent Productivity Suite">Issue Related to APS</option>
+       <option value="Asknow">Asknow Related Issue</option>
+       <option value="Desktop Support Management">PC Related Issue</option>
+       <option value="Email">Kerio and Outlook Related Issue</option>
+       <option value="Empower">Empower Related Issue</option>
+       <option value="eWFM">ESP Issue</option>
+       <option value="IT At-Home Service Desk Management">PC Only Issue</option>
+       <option value="Kronos">Kronos Issue</option>
+       <option value="Oracle ERP">Oracle Issue</option>
+       <option value="Password Management">Password Reset Issue</option>
+       <option value="Pidgin">Pidgin Issue</option>
+       <option value="Pidgin Chat">Pidgin Chat Issue</option>
+       <option value="Telephony Management - Cisco">Cisco Softphone Issue</option>
+       <option value="TeleTech University">TeleTech University Issue</option>
+       <option value="Web Conferencing">Zoom Related Issue</option>
+       <option value="Workbooth - COP/BO Email ">Corner Office Pavillion Email Issue </option>
+       <option value="WorkBooth - Go to Work">Go to Work App and URT EXpress Issue</option>
+       <option value="WorkBooth - ISA">WorkBooth - ISA</option>
+       <option value="Workbooth - URT Audio">Workbooth - URT Audio Issue</option>
+	    <option value="Workbooth - TT2Go">Workbooth - TT2Go</option>
+       <option value="VDI Management">VM Desktop Issue</option>
+   
+   
+</select>
+        <textarea class="hidden"></textarea><br>
+        <textarea id="business" name="business" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Business Services</font></button>
+        <span class="span-message"></span>
+        <textarea class="hidden"></textarea><br>
+        <textarea class="hidden"></textarea><br>
+		
+		
+		
+		
+		
+<select class="selectbox5" name="getagroup" id="getagroup" size="1" onChange="javascript:agroup();">
+  <option value="Athome Service Desk">Athome Service Desk</option>
+  <option value="AH - Engineering">Athome Engineering</option></center>
+  <option value="Athome Escalations">Athome Escalations</option>
+  <option value="Business Capabilities">BCAS</option>
+  <option value="CE InterApp Support">InterApp Support</option>
+  <option value="ASK Now Support">ASK Now Support</option>
+  <option value="ISU Provisioning">ISU</option>
+  <option value="Global Service Desk">Global Service Desk</option>
+  <option value="Global ID Management">Global ID Management</option>
+  <option value="Voice and SIP Infrastructure Admin">SIP Support</option>
+  <option value="VDI - Operations">VDI</option>
+  
+</select>
+        <textarea class="hidden"></textarea><br>
+        <textarea id="agroup" name="agroup" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Assignment Group</font></button>
+        <span class="span-message"></span>
+
+        <br><br>
+
+
+	<input type="text" disabled class="textboxclass" name="assignedto" id="assignedto" value="" onkeyup="rfix()" onclick="this.select()" />
+        <textarea class="hidden"></textarea><br>
+        <textarea id="copyassignedto" name="copyassignedto" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Assigned to</font></button>
+        <span class="span-message"></span>
+
+
+<br><br>
+
+
+	<input type="text" class = "textboxclass" name="rfixinput" id="rfixinput" value="What fixed the Issue?" onkeyup="rfix()" onclick="this.select()" onfocusout="settext4();"/>
+        <textarea class="hidden"></textarea><br>
+        <textarea id="rfix" name="rfix" rows="20" cols="1%" class="notes2copy" style="border: #027991;"></textarea>
+        <button type="button" id="btn-copy2" class="btn-copy" ><font color="#FFF">Resolution Fix</font></button>
+        <span class="span-message"></span>
+
+
+
+
+
+<br><br>
+
+	<input type="text" class = "textboxclass" name="tbconvert" id="tbconvert" value="MST to MLA Time Converter" onclick="this.select()" onfocusout="settext5()"/>
+<br>
+        <button type="button" id="convertbutton" onclick="converttime()"><font color="#FFF">Convert</font></button>
+
+
+
+
+
+
+
+
+</center>
+<br>
+       
+
+
+
+
+
+
+</div>
+<br>
+
+
+
+
+<center><button type="button" onclick="reload()"; class="button2"><font color="#FFF">Reload</font></button> </center> 
+<font color="#FFF" align="right">Theme:</font><select id="setcolor" name="setcolor" onchange="setcolor()";>
+<option value="Original">Original</option>
+<option value="Blue">Blue</option>
+<option value="Green">Green</option>
+<option value="Pink">Burgundy</option>
+<option value="Red">Red</option>
+</select>
+
+
+<script>
+function rfix() { 
+    	var rfixval = document.getElementById('rfixinput').value;
+	document.getElementById("rfix").value = "Resolution Fix Action/s: " + rfixval;
+	
+}
+</script>
+
+
+
+
+
+<script>
+function initial() { 
+    
+agroup();
+lobsitetocopy();
+businesstocopy();
+projtocopy();
+settext0();
+settext1();
+settext2();
+settext3();
+settext4();
+settext5();
+setcolor();
+
+
+
+}
+</script>
+
+
+
+<script>
+function agroup() {     
+        var getagroup = document.getElementById("getagroup");
+	var agroupvalue = getagroup.options[getagroup.selectedIndex].value;
+        document.getElementById("agroup").value = agroupvalue;
+}
+</script>
+
+<script>
+function businesstocopy() {     
+        var getagroup = document.getElementById("bus");
+	var agroupvalue = getagroup.options[getagroup.selectedIndex].value;
+        document.getElementById("business").value = agroupvalue;
+}
+</script>
+
+
+
+<script>
+function lobsitetocopy() {
+        var getlobsite = document.getElementById("lsite");
+        var lobsitevalue = getlobsite.options[getlobsite.selectedIndex].value;
+        document.getElementById("lobsite").value = lobsitevalue;
+}
+</script>
+
+
+
+<script>
+function projtocopy() {
+    
+
+	
+        var getproject = document.getElementById("project");
+	var projectvalue = getproject.options[getproject.selectedIndex].value;
+        document.getElementById("projtocopy").value = projectvalue;
+
+	 if(projectvalue=="Handy" || projectvalue=="ADP Enterprise Services") {
+
+         document.getElementById("lsite").selectedIndex = 1;
+	 lobsitetocopy();
+
+}
+
+	 if(projectvalue!="Handy" && projectvalue!="ADP Enterprise Services") {
+
+         document.getElementById("lsite").selectedIndex = 0;
+	 lobsitetocopy();
+
+}
+
+}
+</script>
+
+<script>
+function callheader() {
+         
+
+
+
+	var uidentifier = document.getElementById('headerinfopush').value;
+	
+	var LOB = document.getElementById('yekto').value;
+	var oracle = document.getElementById('onum').value;
+	var callername = document.getElementById('cname').value;
+    var agentissue = document.getElementById('aissue').value;
+
+
+if(uidentifier =="")
+	{
+	var divider ="";
+	}
+
+if(uidentifier !="")
+	{
+	var divider =" | ";
+	}
+
+    	var cheader = (uidentifier + divider+ LOB + " | " + oracle + " | " + callername  + " | " + agentissue);
+	var copyheader = cheader;
+	document.getElementById('headerinfo').value = cheader;
+	document.getElementById("getheader").value = copyheader;
+
+
+
+}
+</script>
+
+<script>
+function settext0() {
+
+var LOBtext = document.getElementById('yekto').value;
+var oracletext = document.getElementById('onum').value;
+var callernametext = document.getElementById('cname').value;
+var agentissuetext = document.getElementById('aissue').value;
+
+
+if (LOBtext=="N/A") {
+document.getElementById("yekto").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+
+if (LOBtext=="") {
+yekto.value="Client LOB";
+document.getElementById("yekto").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+if (LOBtext!="" && LOBtext!="Client LOB") {
+document.getElementById("yekto").style.backgroundColor = "#81F79F";
+}
+
+
+if (LOBtext!="" && oracletext!="" &&  callernametext!="" && agentissuetext!="" && LOBtext!="LOB" && oracletext!="Oracle#" && callernametext!="Caller Name" && agentissuetext!="Agent's Issue" ) {
+document.getElementById("headerinfo").style.backgroundColor = "#81F79F";
+}
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function settext1() {
+
+var LOBtext = document.getElementById('yekto').value;
+var oracletext = document.getElementById('onum').value;
+var callernametext = document.getElementById('cname').value;
+var agentissuetext = document.getElementById('aissue').value;
+
+if (oracletext=="Oracle#") {
+document.getElementById("onum").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+if (oracletext=="") {
+onum.value="Oracle#";
+document.getElementById("onum").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+if (oracletext!="" && oracletext!="Oracle#") {
+document.getElementById("onum").style.backgroundColor = "#81F79F";
+
+}
+
+if (oracletext!="" &&  callernametext!="" && agentissuetext!="" && oracletext!="Oracle#" && callernametext!="Caller Name" && agentissuetext!="Agent's Issue" ) {
+document.getElementById("headerinfo").style.backgroundColor = "#81F79F";
+}
+
+}
+
+
+</script>
+
+<script>
+function settext2() {
+
+var LOBtext = document.getElementById('yekto').value;
+var oracletext = document.getElementById('onum').value;
+var callernametext = document.getElementById('cname').value;
+var agentissuetext = document.getElementById('aissue').value;
+
+
+if (callernametext=="Caller Name") {
+document.getElementById("cname").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+
+if (callernametext=="") {
+cname.value="Caller Name";
+document.getElementById("cname").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+if (callernametext!="" && callernametext!="Caller Name") {
+document.getElementById("cname").style.backgroundColor = "#81F79F";
+}
+
+
+if (oracletext!="" &&  callernametext!="" && agentissuetext!="" && oracletext!="Oracle#" && callernametext!="Caller Name" && agentissuetext!="Agent's Issue" ) {
+document.getElementById("headerinfo").style.backgroundColor = "#81F79F";
+}
+
+
+}
+
+</script>
+
+
+
+<script>
+function settext3() {
+
+var LOBtext = document.getElementById('yekto').value;
+var oracletext = document.getElementById('onum').value;
+var callernametext = document.getElementById('cname').value;
+var agentissuetext = document.getElementById('aissue').value;
+
+if (agentissuetext=="Agent's Issue") {
+document.getElementById("aissue").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+
+if (agentissuetext=="") {
+aissue.value="Agent's Issue";
+document.getElementById("aissue").style.backgroundColor = "#FA5858";
+document.getElementById("headerinfo").style.backgroundColor = "#FA5858";
+}
+
+if (agentissuetext!="" && agentissuetext!="Agent's Issue" ) {
+document.getElementById("aissue").style.backgroundColor = "#81F79F";
+}
+
+
+
+if (oracletext!="" &&  callernametext!="" && agentissuetext!="" && oracletext!="Oracle#" && callernametext!="Caller Name" && agentissuetext!="Agent's Issue" ) {
+document.getElementById("headerinfo").style.backgroundColor = "#81F79F";
+}
+
+
+
+}
+
+</script>
+
+
+<script>
+function settext4() {
+
+var rfixval = document.getElementById('rfixinput').value;
+
+
+if (rfixval=="What fixed the Issue?") {
+document.getElementById("rfixinput").style.backgroundColor = "#FEFF73";
+}
+
+
+if (rfixval=="") {
+rfixinput.value="What fixed the Issue?";
+document.getElementById("rfixinput").style.backgroundColor = "#FEFF73";
+}
+
+if (rfixval!="" && rfixval!="What fixed the Issue?") {
+document.getElementById("rfixinput").style.backgroundColor = "#81F79F";
+}
+
+
+}
+
+
+</script>
+
+<script>
+function settext5() {
+
+
+var tbconvertval = document.getElementById('tbconvert').value;
+
+if (tbconvertval == "")
+	{
+	tbconvert.value="MST to MLA Time Converter";
+	}
+}
+
+
+</script>
+
+
+
+
+
+
+<script>
+function converttime() {
+
+
+
+Number.prototype.padLeft = function(base,chr){
+   var  len = (String(base || 10).length - String(this).length);
+   return len > 0? new Array(len).join(chr || '0')+this : this;
+}
+
+
+
+	var convert = document.getElementById("tbconvert").value;
+	var gettingmonth = convert.substring(3, 6);
+	var gettingyear = convert.substring(7, 9);
+        var gettingday = parseInt(convert.substring(0, 2));
+	var gettingtime = convert.split(" ")[1];
+	var gettinghh = parseInt(gettingtime.substring(0, 2));
+	var gettingmm = convert.split(":")[1];
+
+if (gettinghh == 10)
+	{
+		gettinghh = "00";
+		gettingday = (gettingday + 1).padLeft();
+	}
+
+else if(gettinghh > 09)
+	{
+		gettinghh = (gettinghh - 10).padLeft();
+		gettingday = (gettingday + 1).padLeft();
+	}
+
+else
+	{
+		gettinghh = gettinghh + 14;
+	}
+
+
+
+var validcheck1 = convert.charAt(1);
+var validcheck2 = convert.charAt(5);
+var validcheck3 = convert.charAt(8);
+var validcheck4 = convert.charAt(11);
+
+if (validcheck1 == "-" && validcheck2 == "-" && validcheck3 == " " && validcheck4 == ":")
+	{
+	alert(convert + " MST = " + gettingday + "-" + gettingmonth + "-" + gettingyear + " " + gettinghh + ":" + gettingmm + " MLA");
+	}
+
+else
+	{
+	alert("Invalid Time Format! \nValid time format is like this: 19-Feb-16 12:00");
+	}
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+function chatheaderextract() {
+    
+    var str = document.getElementById("textbox1").value;
+    var cond = str.split("ChatConcern: ")[1];
+    var getcond = cond.split(" ", 1);
+    var y = "GNATechIssue";
+    var x = "CertificateRequest";
+    var w = "PasswordReset";
+    var z = "ProdTechIssue";
+	var v = "TrainingTechIssue";
+   
+  
+  
+    
+
+    if (getcond == x) {   
+    var gettingFN = str.split("Last Name: ")[1];
+    var firstname = gettingFN.split(" ", 1);
+    var gettingLN = str.split(firstname)[1];
+    var lastname = gettingLN.split(" ")[1];
+
+		if(lastname == "Project(LOB):")
+			{
+				lastname = "";
+			}
+
+    var gettingO = str.split("Hirepoint ID: ")[1];
+    var oracle = gettingO.split(" ", 1);
+    var description = str.split("Description: ")[1];		
+    var output = ("#Chat | " + oracle + " | " + firstname + " " + lastname + " | " + description);
+    headerinfo.value=output;
+    getheader.value=output;
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+    document.getElementById("project").selectedIndex = 1;
+
+    }  
+    else if (getcond == y){
+
+
+    var gettingFN = str.split("Last Name: ")[1];
+    var firstname = gettingFN.split(" ", 1);
+    var gettingLN = str.split(firstname)[1];
+    var lastname = gettingLN.split(" ")[1];
+
+		if(lastname == "Project(LOB):")
+			{
+				lastname = "";
+			}
+
+    var gettingO = str.split("Hirepoint ID: ")[1];
+    var oracle = gettingO.split(" ", 1);
+    var description = str.split("Description: ")[1];		
+    var output = ("#Chat | " + oracle + " | " + firstname + " " + lastname + " | " + description);
+    headerinfo.value=output;
+    getheader.value=output;
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+    document.getElementById("project").selectedIndex = 1;
+
+}  
+    else if (getcond == z){
+
+
+    var gettingFN = str.split("Last Name: ")[1];
+    var firstname = gettingFN.split(" ", 1);
+    var gettingLN = str.split(firstname)[1];
+    var lastname = gettingLN.split(" ")[1];
+
+		if(lastname == "Project(LOB):")
+			{
+				lastname = "";
+			}
+
+    var gettingO = str.split("Hirepoint ID: ")[1];
+    var oracle = gettingO.split(" ", 1);
+    var description = str.split("Description: ")[1];		
+    var output = ("#Chat | " + oracle + " | " + firstname + " " + lastname + " | " + description);
+    headerinfo.value=output;
+    getheader.value=output;
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+    document.getElementById("project").selectedIndex = 1;
+
+
+   
+
+
+
+
+
+ 
+
+    }
+
+    
+
+
+    else if (getcond == v){
+    var gettingFN = str.split("Last Name: ")[1];
+    var firstname = gettingFN.split(" ", 1);
+    var gettingLN = str.split(firstname)[1];
+    var lastname = gettingLN.split(" ")[1];
+
+		if(lastname == "Project(LOB):")
+			{
+				lastname = "";
+			}
+
+    var gettingO = str.split("Oracle/Hirepoint ID: ")[1];
+    var oracle = gettingO.split(" ", 1);
+    var description = str.split("Description: ")[1];		
+    var output = ("#Chat | " + oracle + " | " + firstname + " " + lastname + " | " + description);
+    headerinfo.value=output;
+    getheader.value=output;
+
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+    }
+
+ else if (getcond == w){
+    var gettingFN = str.split("Last Name: ")[1];
+    var firstname = gettingFN.split(" ", 1);
+    var gettingLN = str.split(firstname)[1];
+    var lastname = gettingLN.split(" ")[1];
+
+		if(lastname == "Project(LOB):")
+			{
+				lastname = "";
+			}
+
+    var gettingO = str.split("Oracle/Hirepoint ID: ")[1];
+    var oracle = gettingO.split(" ", 1);
+    var description = str.split("Description: ")[1];		
+    var output = ("#Chat | " + oracle + " | " + firstname + " " + lastname + " | " + description);
+    headerinfo.value=output;
+    getheader.value=output;
+
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+    }
+	
+	headerinfo.value=output;
+    getheader.value=output;
+
+    onum.value=oracle;
+    cname.value=firstname + " " + lastname;
+    aissue.value=description;
+	
+	
+callheader();
+settext0();
+settext1();
+settext2();
+settext3();
+puttime1();
+projtocopy();
+
+}
+</script>
+
+
+
+
+
+<script language="JavaScript">
+
+function puttime1(){
+
+var monthNames = [
+  "Jan", "Feb", "Mar",
+  "Apr", "May", "Jun", "Jul",
+  "Aug", "Sep", "Oct",
+  "Nov", "Dec"
+];
+
+
+Number.prototype.padLeft = function(base,chr){
+   var  len = (String(base || 10).length - String(this).length)+1;
+   return len > 0? new Array(len).join(chr || '0')+this : this;
+}
+    
+
+
+    var d = new Date;
+  
+var hours = parseInt(d.getHours().padLeft());
+var minutes = d.getMinutes().padLeft();
+var date = parseInt(d.getDate().padLeft());
+var year = d.getFullYear()-2000;
+var month = monthNames[d.getMonth()];
+
+
+
+
+if (hours == 15)
+	{
+	hours = "00";
+	}
+
+else if (hours > 15)
+	{
+	hours = hours - 15;
+	}
+
+else
+	{
+	hours = hours + 9;
+	date = date - 1;
+	if (date == 0)
+		{
+		if (month == "Jan" || month == "Feb" || month == "Apr" || month == "May" || month == "Jun" || month == "Aug" || month == "Sep" || month == "Nov")
+			{
+				date = 31;
+
+				
+			}
+		else if (month =="Mar")
+			{
+				date = 29;
+			}
+
+		else
+			{
+				date = 30;
+			}
+		month = monthNames[[d.getMonth()]-1];
+		}
+	
+	
+	}
+
+
+
+var final = date + "-" + month + "-" + year +" " + hours + ":" + minutes;
+
+document.getElementById('time1').value = final;
+
+var x = document.getElementById("time1").value;
+
+    aggregateInput();
+
+}
+
+</script>
+
+
+<script language="JavaScript">
+
+function puttime2(){
+
+var monthNames = [
+  "Jan", "Feb", "Mar",
+  "Apr", "May", "Jun", "Jul",
+  "Aug", "Sep", "Oct",
+  "Nov", "Dec"
+];
+
+
+Number.prototype.padLeft = function(base,chr){
+   var  len = (String(base || 10).length - String(this).length)+1;
+   return len > 0? new Array(len).join(chr || '0')+this : this;
+}
+    
+
+
+    var d = new Date;
+  
+var hours = parseInt(d.getHours().padLeft());
+var minutes = d.getMinutes().padLeft();
+var date = parseInt(d.getDate().padLeft());
+var year = d.getFullYear()-2000;
+var month = monthNames[d.getMonth()];
+
+
+
+if (hours == 15)
+	{
+	hours = "00";
+	}
+
+else if (hours > 15)
+	{
+	hours = hours - 15;
+	}
+
+else
+	{
+	hours = hours + 9;
+	date = date - 1;
+	if (date == 0)
+		{
+		if (month == "Jan" || month == "Feb" || month == "Apr" || month == "May" || month == "Jun" || month == "Aug" || month == "Sep" || month == "Nov")
+			{
+				date = 31;
+
+				
+			}
+		else if (month =="Mar")
+			{
+				date = 29;
+			}
+
+		else
+			{
+				date = 30;
+			}
+		month = monthNames[[d.getMonth()]-1];
+		}
+	
+	
+	}
+
+
+
+var final = date + "-" + month + "-" + year +" " + hours + ":" + minutes;
+
+document.getElementById('time2').value = final;
+
+var x = document.getElementById("time2").value;
+
+    aggregateInput();
+
+
+}
+</script>
+
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+function aggregateInput()
+{
+
+    
+	var getwf = document.getElementById("wf");
+	var wfvalue = getwf.options[getwf.selectedIndex].value;
+	var getisp = document.getElementById("getisp");
+	var ispvalue = getisp.options[getisp.selectedIndex].value;
+        var getos = document.getElementById("os");
+	var osvalue = getos.options[getos.selectedIndex].value;
+	var getav = document.getElementById("av");
+	var avvalue = getav.options[getav.selectedIndex].value;
+	var getbrowser = document.getElementById("browser");
+	var browservalue = getbrowser.options[getbrowser.selectedIndex].value;
+	var startvalue = document.getElementById('time1').value;
+	var endvalue = document.getElementById('time2').value;
+	var hashvalue = document.getElementById('hashtag').value;
+	var putvalue = hashvalue + "\nWireless Connected = " +wfvalue + "\nOperating System = " +osvalue + "\nAV Software = " +avvalue + "\nBrowser Version = " + browservalue + "\nISP = " + ispvalue + "\n\n";
+        var currentvalue = document.getElementById('notes').value;
+        document.getElementById('notestocopy').value = putvalue + currentvalue;
+	var copystarttime =  startvalue;
+	var copyendtime = endvalue;
+	document.getElementById('starttime').value = copystarttime;
+	document.getElementById('endtime').value = copyendtime;
+
+
+}
+//]]>  
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function() {
+function zcInit(){var a=new ZeroClipboard($(".btn-copy"));a.on("ready",function(){a.on("copy",function(a){var e=$(a.target).prev(),t=e.is("textarea")?e.val().replace(/\n/g,"\r\n"):e.val();t&&a.clipboardData.setData("text/plain",t)}),a.on("aftercopy",function(a){var e=$(a.target);e.prev().val()&&e.next().stop().css("opacity",1).text("Copied!").fadeIn(30).fadeOut(1e3)})}),a.on("error",function(){ZeroClipboard.destroy()})}function addHandler_WinClipData(){$(".btn-copy").click(function(){var a=$(this).prev(),e=a.is("textarea")?a.val().replace(/\n/g,"\r\n"):a.val();e&&window.clipboardData.setData("Text",e)&&$(this).next().stop().css("opacity",1).text("Copied!").fadeIn(30).fadeOut(1e3)})}function addHandler_AlertMsg(){$(".btn-copy").click(function(){$(this).prev().val()&&(alert("No Flash installed. Please copy manually"),$(this).prev().focus().select())})}function detectFlash(){var a=!1;try{var e=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");e&&(a=!0)}catch(t){navigator.mimeTypes&&void 0!==navigator.mimeTypes["application/x-shockwave-flash"]&&navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin&&(a=!0)}return a}var hasWinClipData=!(!window.clipboardData||!clipboardData.setData),hasFlash=detectFlash();hasWinClipData?addHandler_WinClipData():hasFlash?$.ajax({type:"GET",url:"//cdn.jsdelivr.net/zeroclipboard/2.1.6/ZeroClipboard.min.js",dataType:"script",cache:!0,success:zcInit,error:addHandler_AlertMsg}):addHandler_AlertMsg();
+}());
+</script>
+
+
+
+<script>
+function setcolor(){
+	var getcolor = document.getElementById("setcolor");
+	var color    = getcolor.options[getcolor.selectedIndex].value;
+
+
+
+	if(color == "Original")
+	{
+             document.body.style.backgroundImage = "url('images/gradientoriginal.jpg')";
+
+             var x =  document.getElementsByTagName('button');
+	     for (var i = 0, len = (x.length -1); i < len; ++i) 
+	     {
+	     x[i].style.backgroundImage = "url('images/gradientoriginalbutton.jpg')";
+             }
+
+	}
+
+	if(color == "Green")
+	{
+             document.body.style.backgroundImage = "url('images/gradientgreen.jpg')";
+
+             var x =  document.getElementsByTagName('button');
+	     for (var i = 0, len = (x.length -1); i < len; ++i) 
+	     {
+	     x[i].style.backgroundImage = "url('images/gradientblue.jpg')";
+             }
+
+	}
+
+	if(color == "Blue")
+	{
+             document.body.style.backgroundImage = "url('images/gradientblue.jpg')";
+
+
+             var x =  document.getElementsByTagName('button');
+	     for (var i = 0, len = (x.length -1); i < len; ++i) 
+	     {
+	     x[i].style.backgroundImage = "url('images/gradientblue.jpg')";
+             }
+	}
+
+	if(color == "Pink")
+	{
+             var x =  document.getElementsByTagName('button');
+	     document.body.style.backgroundImage = "url('images/gradientpink.jpg')";
+
+
+	     for (var i = 0, len = (x.length -1); i < len; ++i) 
+	     {
+	     x[i].style.backgroundImage = "url('images/gradientpink.jpg')";
+             }
+	  	
+
+	}
+
+	if(color == "Red")
+	{
+             document.body.style.backgroundImage = "url('images/gradientpink.jpg')";
+
+
+             var x =  document.getElementsByTagName('button');
+	     for (var i = 0, len = (x.length -1); i < len; ++i) 
+	     {
+	     x[i].style.backgroundImage = "url('images/gradientpink.jpg')";
+             }
+
+	}
+
+}
+</script>
+
+
+
+<script>
+function reload() {
+        document.getElementById('textbox1').value = "";
+		document.getElementById('yekto').selectedIndex = 0;
+        document.getElementById('onum').value = "";
+        document.getElementById('cname').value = "";
+        document.getElementById('aissue').value = "";
+        document.getElementById('headerinfo').value = "";
+        document.getElementById('getheader').value = "";
+        document.getElementById('time1').value = "";
+        document.getElementById('time2').value = "";
+        document.getElementById('notes').value = "";
+		
+		document.getElementById("wf").selectedIndex = 0;
+        document.getElementById("os").selectedIndex = 0;
+        document.getElementById("av").selectedIndex = 0;
+        document.getElementById("browser").selectedIndex = 0;
+        document.getElementById("getisp").selectedIndex = 0;
+        document.getElementById("project").selectedIndex = 0;
+        document.getElementById("lsite").selectedIndex = 0;
+        document.getElementById("getagroup").selectedIndex = 0;
+        document.getElementById('notestocopy').value = "";
+        document.getElementById('projtocopy').value = "";
+        document.getElementById('lobsite').value = "";
+		document.getElementById('business').value = "";
+        document.getElementById('agroup').value = "";
+        document.getElementById('rfixinput').value = "";
+        document.getElementById('rfix').value = "";
+        document.getElementById('headerinfopush').value = "";
+	document.getElementById('ui1').value = "";
+	document.getElementById('ui2').value = "";
+	document.getElementById('starttime').value = "";
+	document.getElementById('endtime').value = "";
+        document.getElementById('tbconvert').value = "";
+	$('input:checkbox').removeAttr('checked');
+        initial();
+}
+</script>
+
+
+<script>
+    var person = prompt("Please enter your Asknow name.", "FirstName LastName");
+
+assignedto.value=person;
+copyassignedto.value=person;
+
+</script>
+
+
+<script>
+$('.chkbx').click(function(){
+    var text = "";
+    $('.chkbx:checked').each(function(){
+        text += $(this).val()+' ';
+    });
+    text = text.substring(0,text.length-1);
+    
+    $('#hashtag').val(text);
+	aggregateInput();
+   
+});
+
+</script>
+
+<SCRIPT language=JavaScript>
+<!--
+showHideTooltip = function () {
+var obj = event.srcElement;
+with(document.getElementById("tooltip")) {
+innerHTML = obj.options[obj.selectedIndex].value;
+with(style) {
+if(event.type == "mouseleave") {
+display = "none";
+} else {
+display = "inline";
+left = event.x;
+top = event.y;
+}
+}
+}
+}
+//-->
+</SCRIPT>
+
+
+
+
+</body>
+</html>
+
