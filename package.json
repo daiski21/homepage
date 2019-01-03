@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/daiski21/homepage/issues"
   },
-  "homepage": "https://github.com/daiski21/homepage#readme",
+  "homepage": "https://github.com/daiski21/homepage/asdnotesmaker.html",
   "dependencies": {
     "express": "^4.14.0"
   }
